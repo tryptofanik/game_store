@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+    <dl>
+        {{ render_field(form.from_time) }}
+        {{ render_field(form.to_time) }}
+        {{ render_field(form.keywords) }}
+        {{ render_field(form.min_score) }}
+    </dl>
+    <p><input type="submit" value="Search">
+    </p></form>
+
+{{table}}
+
+<!-- 
+<table>
+    <th>id</th>
+    <th>game name</th>
+    <th>release date</th>
+    <th>price</th>
+    <th>score</th>
+    <th>buy me!</th>
+    {% for row in games %}
+        <tr>
+
+            {% for value in row %}
+                <td>{{value}}</td>
+            {% endfor%}
+
+        </tr>
+    {% endfor %}
+</table> -->
+
+</body>
+</html>
