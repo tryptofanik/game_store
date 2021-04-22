@@ -24,7 +24,7 @@ CREATE TABLE Orders
     net_amount money NOT NULL,
     discount decimal NULL,
     gross_amount money NOT NULL,
-    FOREIGN KEY (game_id) REFERENCES Games (game_id)
+    FOREIGN KEY (game_id) REFERENCES Games (game_id) ON DELETE CASCADE
 );
 
 
