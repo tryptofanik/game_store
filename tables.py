@@ -1,7 +1,7 @@
 from flask_table import Table, Col, LinkCol
 
 
-class Results(Table):
+class ResultsTable(Table):
     game_id = Col("id")
     game_name = Col("game name")
     release_date = Col("release date")
@@ -9,7 +9,7 @@ class Results(Table):
     score = Col("score")
     buy_me = LinkCol("Buy me!", "buy", url_kwargs=dict(game_id="game_id"))
 
-class OrdersManager(Table):
+class OrdersManagerTable(Table):
     order_id = Col('id')
     order_date = Col('order date')
     game_id = Col('game id')
@@ -19,7 +19,7 @@ class OrdersManager(Table):
     edit = LinkCol("Edit me!", "edit_order", url_kwargs=dict(order_id="order_id"))
     delete = LinkCol("Delete me!", "delete_order", url_kwargs=dict(order_id="order_id"))
 
-class GamesManager(Table):
+class GamesManagerTable(Table):
     game_id = Col("id")
     game_name = Col("game name")
     release_date = Col("release date")

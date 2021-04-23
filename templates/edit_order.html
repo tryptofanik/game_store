@@ -1,0 +1,14 @@
+<doctype html="">
+    <title>Edit Game</title>
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+        <dl>
+            {{ render_field(form.order_date) }}
+            {{ render_field(form.game_id) }}
+            {{ render_field(form.net_amount) }}
+            {{ render_field(form.discount) }}
+            {{ render_field(form.gross_amount) }}
+        </dl>
+        <p><input type="submit" value="Submit">
+    </p></form>
+</doctype>
